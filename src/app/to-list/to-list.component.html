@@ -1,0 +1,35 @@
+<div class="contaier">
+    <div class="row">
+        <form [formGroup]="formGroupDtl">
+            <input type="text" class="form-control" formControlName="itemName" name="itemName" placeholder="Enter Item"
+                aria-label="Item" aria-describedby="basic-addon1">
+        </form>
+    </div>
+    <button class="form-control" type="submit" (click)="addItem()">Add</button>
+    <button class="form-control" (click)="clearItem()">clear</button>
+</div>
+
+<!-- <div>
+    <ul *ngFor="let item of toDoListData">
+        <li>
+            {{item.itemName}}
+        </li>
+    </ul>
+</div> -->
+
+<div>
+    <table>
+        <thead>
+            <th>Item Name</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of toDoListData; let i=index">
+                <td>{{item.itemName}}</td>
+                <td>
+                    <button (click)="removeItem(i, item.itemName)">Remove</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

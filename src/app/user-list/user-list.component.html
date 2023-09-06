@@ -1,0 +1,15 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-4 pt-5" *ngFor="let value of userData">
+            <div class="card text-center" style="width: 18rem;">
+                <img src={{value.avatar_url}} class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{value.login}}</h5>
+                    <p class="card-text"></p>
+                    <a (click)="getUserProfile(value)" class="btn btn-primary">View Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
